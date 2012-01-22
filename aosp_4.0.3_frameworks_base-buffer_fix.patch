@@ -1,0 +1,23 @@
+commit e405ef8964cce5e0d98414f59c295db9eca9745d
+Author: mrdeadlocked <mr.dead.locked@gmail.com>
+Date:   Fri Jan 20 23:40:21 2012 -0500
+
+    Tegra Buffer Fix
+
+diff --git a/libs/gui/Android.mk b/libs/gui/Android.mk
+index 9767568..3ede6af 100644
+--- a/libs/gui/Android.mk
++++ b/libs/gui/Android.mk
+@@ -32,9 +32,9 @@ LOCAL_SHARED_LIBRARIES := \
+ 
+ LOCAL_MODULE:= libgui
+ 
+-ifeq ($(TARGET_BOARD_PLATFORM), tegra)
+-	LOCAL_CFLAGS += -DALLOW_DEQUEUE_CURRENT_BUFFER
+-endif
++#ifeq ($(TARGET_BOARD_PLATFORM), tegra)
++#	LOCAL_CFLAGS += -DALLOW_DEQUEUE_CURRENT_BUFFER
++#endif
+ 
+ include $(BUILD_SHARED_LIBRARY)
+ 

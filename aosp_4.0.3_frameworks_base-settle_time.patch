@@ -1,0 +1,19 @@
+commit e5c7f45096cc57b95321965eec59d39578400bab
+Author: mrdeadlocked <mr.dead.locked@gmail.com>
+Date:   Fri Jan 20 23:46:04 2012 -0500
+
+    Orientation Settle Time Reduction
+
+diff --git a/core/java/android/view/WindowOrientationListener.java b/core/java/android/view/WindowOrientationListener.java
+index c3c74a7..2b7c5aa 100755
+--- a/core/java/android/view/WindowOrientationListener.java
++++ b/core/java/android/view/WindowOrientationListener.java
+@@ -322,7 +322,7 @@ public abstract class WindowOrientationListener {
+         // The number of milliseconds for which the device posture must be stable
+         // before we perform an orientation change.  If the device appears to be rotating
+         // (being picked up, put down) then we keep waiting until it settles.
+-        private static final int SETTLE_TIME_MS = 200;
++        private static final int SETTLE_TIME_MS = 50;
+ 
+         // The maximum change in magnitude that can occur during the settle time.
+         // Tuning this constant particularly helps to filter out situations where the

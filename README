@@ -1,3 +1,4 @@
 This folder contains minor patches used in building TeamDRH ROMs.
 
-Patch is prefixed with source (i.e. aosp, cm) and version (i.e. 4.0.3) followed by project path.
+Patch is prefixed with source (i.e. aosp, cm) and version (i.e. 4.0.3),
+followed by project path and comment.
