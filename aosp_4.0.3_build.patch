@@ -1,0 +1,13 @@
+diff --git a/tools/releasetools/ota_from_target_files b/tools/releasetools/ota_from_target_files
+index 1514ea7..e8b8b02 100755
+--- a/tools/releasetools/ota_from_target_files
++++ b/tools/releasetools/ota_from_target_files
+@@ -309,7 +309,7 @@ def SignOutput(temp_zip_name, output_zip_name):
+ 
+ def AppendAssertions(script, input_zip):
+   device = GetBuildProp("ro.product.device", input_zip)
+-  script.AssertDevice(device)
++##JB  script.AssertDevice(device)
+ 
+ 
+ def MakeRecoveryPatch(output_zip, recovery_img, boot_img):

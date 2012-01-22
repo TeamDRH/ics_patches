@@ -1,0 +1,13 @@
+diff --git a/bluedroid/bluetooth.c b/bluedroid/bluetooth.c
+index 4cc9204..81261cd 100644
+--- a/bluedroid/bluetooth.c
++++ b/bluedroid/bluetooth.c
+@@ -169,7 +169,7 @@ int bt_enable() {
+ 
+         ret = ioctl(hci_sock, HCIDEVUP, HCI_DEV_ID);
+ 
+-        LOGI("bt_enable: ret: %d, errno: %d", ret, errno);
++// JB        LOGI("bt_enable: ret: %d, errno: %d", ret, errno);
+         if (!ret) {
+             break;
+         } else if (errno == EALREADY) {
