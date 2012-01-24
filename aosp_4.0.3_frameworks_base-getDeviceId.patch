@@ -1,0 +1,20 @@
+diff --git a/telephony/java/android/telephony/TelephonyManager.java b/telephony/java/android/telephony/TelephonyManager.java
+index db78e2e..43a7d3d 100755
+--- a/telephony/java/android/telephony/TelephonyManager.java
++++ b/telephony/java/android/telephony/TelephonyManager.java
+@@ -192,13 +192,8 @@ public class TelephonyManager {
+      *   {@link android.Manifest.permission#READ_PHONE_STATE READ_PHONE_STATE}
+      */
+     public String getDeviceId() {
+-        try {
+-            return getSubscriberInfo().getDeviceId();
+-        } catch (RemoteException ex) {
+-            return null;
+-        } catch (NullPointerException ex) {
+-            return null;
+-        }
++        String FAKEID = "00-34567-89012-45";
++        return FAKEID;
+     }
+ 
+     /**
